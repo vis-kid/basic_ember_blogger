@@ -1,13 +1,12 @@
 <div class='container'>
   <h1>Ember blog</h1>
+  <ul>
+  {{#each}}
+    <li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
+  {{/each}}
+  </ul>
 
-	<ul>
-		{{#each}}
-		<li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
-		{{/each}}
-	</ul>
-
-	<p><a href='#' {{action 'sortByTitle'}}>Sort by title</a></p>
-
-	<p>{{#link-to 'new-post'}}Create new post{{/link-to}}</p>
+  <p><a href='#' {{action 'sortByTitle'}}>Sort by title</a></p>
+	
+  <p>{{#link-to 'new-post'}}Create new post{{/link-to}}</p>
 </div>

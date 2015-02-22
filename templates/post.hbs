@@ -2,20 +2,20 @@
 {{ #if isEditing}}
   <form>
     <label for='title'>Title</label>
-	  {{input id='title' value=title}}
+    {{input id='title' value=title}}
     <label for='body'>Body</label>
-		{{textarea id='body' value=body}}
-		<button {{action 'save'}}>Save changes</button>
-	</form>
+    {{textarea id='body' value=body}}
+    <button {{action 'save'}}>Save changes</button>
+  </form>
 {{else}}
   <p>{{body}}</p>
-	<button {{action 'edit'}}>Edit post</button>
-	<button {{action 'delete'}}>Delete post</button>
+  <button {{action 'edit'}}>Edit post</button>
+  <button {{action 'delete'}}>Delete post</button>
 {{/if}}
 
 <h2>Comments</h2>
 {{#each comments}}
-  <p>{{text}}</p> 
+  <p>{{text}}</p>
 {{/each}}
 
 <p>{{#link-to 'new-comment' this.id}}New comment{{/link-to}}</p>
