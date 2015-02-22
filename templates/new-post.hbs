@@ -1,0 +1,9 @@
+<h1>New Post</h1>
+
+<form>
+  <label for='title'>Title</label>
+	{{input id='title' value=title}}
+	<label for='body'>Body</label>
+	{{textarea id='body' value=body}}
+	<button {{action 'save'}}>Save</button>
+</form>
