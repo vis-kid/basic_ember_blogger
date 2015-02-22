@@ -2,8 +2,10 @@
   <h1>Ember blog</h1>
 
 	<ul>
-    <li><a href='#'>I love Ember so far</a></li>
-    <li><a href='#'>I love Handlebars so far</a></li>
-    <li><a href='#'>I love Ember’s conventions so far</a></li>
+		{{#each}}
+		<li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
+		{{/each}}
 	</ul>
+
+	<p><a href='#' {{action 'sortByTitle'}}>Sort by title</a></p>
 </div>
