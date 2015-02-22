@@ -1,9 +1,10 @@
 Blogger.ContactController = Ember.Controller.extend({
-	messageSent: false,
+  messageSent: false,
   actions: {
-	  sendMessage: function() {
+    sendMessage: function() {
       var message = prompt('Type your message here:');
-			this.set('messageSent', true);
-		}
-	}
+      this.set('messageSent', true);
+    }
+  }
 });
+

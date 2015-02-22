@@ -1,7 +1,7 @@
 Blogger.PostsController = Ember.ArrayController.extend({
-	action: {
+  action: {
     sortByTitle: function(){
       this.set('sortProperties', ['title']);
-		}
-	}
+    }
+  }
 });
